@@ -2,3 +2,9 @@ intro
 
 docker build -t simple-app .
 docker run --name simple-app-container --rm -v /app/node_modules -v ${PWD}:/app simple-app
+
+
+running container -  optimizing-docker-builds
+
+docker build -t user-api-1:v1 .                            
+docker run --name user-api-v1 -d -p 8060:3000 user-api-1:v1

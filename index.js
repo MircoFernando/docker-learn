@@ -1,3 +1,11 @@
-let name = "Mirco Fernando";
+const express = require('express');
 
-console.log(`Hello, ${name}! Welcome to Docker Learn.`);
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(3000, () => {
+  console.log('Example app listening on port 3000!');
+});
