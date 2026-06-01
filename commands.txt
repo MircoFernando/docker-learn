@@ -1,0 +1,4 @@
+intro
+
+docker build -t simple-app .
+docker run --name simple-app-container --rm -v /app/node_modules -v ${PWD}:/app simple-app
