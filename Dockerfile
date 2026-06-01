@@ -4,9 +4,13 @@ FROM node:20-alpine
 # Set Working Directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY . .
+COPY package.json . 
 
-CMD ["node", "index.js"]
+RUN npm install
+
+# Copy package.json and package-lock.json
+COPY . ./
+
+CMD ["npm", "run", "start"]
 
 
